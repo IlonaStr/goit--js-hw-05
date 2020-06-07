@@ -7,7 +7,7 @@ class Car {
     
     constructor({price, maxSpeed}) {
         this.speed = 0;
-        this.price = price;
+        this._price = price;
         this.maxSpeed = maxSpeed;
         this.isOn = false;
         this.distance = 0;
@@ -31,7 +31,7 @@ class Car {
     }
   
     accelerate(value) {
-        if(this.speed + value < this.maxSpeed){
+        if(this.speed + value <= this.maxSpeed){
             this.speed += value;
         }
     }
